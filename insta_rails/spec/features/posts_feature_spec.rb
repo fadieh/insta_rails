@@ -35,7 +35,7 @@ feature 'restaurants' do
 	context 'viewing posts' do
 		let!(:cats){Post.create(name:'cats')}
 
-		scenario 'lets a user view a restaurant' do
+		scenario 'lets a user view a post' do
 			visit '/posts'
 			click_link 'cats'
 			expect(page).to have_content 'cats'
