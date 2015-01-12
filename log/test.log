@@ -1,0 +1,66 @@
+  [1m[36m (118.9ms)[0m  [1mDROP DATABASE IF EXISTS "insta_rails_test"[0m
+  [1m[35m (254.2ms)[0m  CREATE DATABASE "insta_rails_test" ENCODING = 'unicode'
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2015-01-12 15:04:50 +0000
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (119.3ms)[0m  [1mDROP DATABASE IF EXISTS "insta_rails_test"[0m
+  [1m[35m (245.8ms)[0m  CREATE DATABASE "insta_rails_test" ENCODING = 'unicode'
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2015-01-12 15:04:58 +0000
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (116.9ms)[0m  [1mDROP DATABASE IF EXISTS "insta_rails_test"[0m
+  [1m[35m (254.8ms)[0m  CREATE DATABASE "insta_rails_test" ENCODING = 'unicode'
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2015-01-12 15:05:17 +0000
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (118.3ms)[0m  [1mDROP DATABASE IF EXISTS "insta_rails_test"[0m
+  [1m[35m (249.5ms)[0m  CREATE DATABASE "insta_rails_test" ENCODING = 'unicode'
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2015-01-12 15:05:31 +0000
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (118.7ms)[0m  [1mDROP DATABASE IF EXISTS "insta_rails_test"[0m
+  [1m[35m (253.4ms)[0m  CREATE DATABASE "insta_rails_test" ENCODING = 'unicode'
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2015-01-12 15:05:56 +0000
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (124.0ms)[0m  [1mDROP DATABASE IF EXISTS "insta_rails_test"[0m
+  [1m[35m (237.6ms)[0m  CREATE DATABASE "insta_rails_test" ENCODING = 'unicode'
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2015-01-12 15:25:13 +0000
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (118.8ms)[0m  [1mDROP DATABASE IF EXISTS "insta_rails_test"[0m
+  [1m[35m (254.9ms)[0m  CREATE DATABASE "insta_rails_test" ENCODING = 'unicode'
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2015-01-12 15:27:13 +0000
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (118.3ms)[0m  [1mDROP DATABASE IF EXISTS "insta_rails_test"[0m
+  [1m[35m (254.3ms)[0m  CREATE DATABASE "insta_rails_test" ENCODING = 'unicode'
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/pictures" for 127.0.0.1 at 2015-01-12 15:27:32 +0000
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (109.8ms)[0m  [1mDROP DATABASE IF EXISTS "insta_rails_test"[0m
+  [1m[35m (255.5ms)[0m  CREATE DATABASE "insta_rails_test" ENCODING = 'unicode'
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/pictures" for 127.0.0.1 at 2015-01-12 15:30:19 +0000
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (119.2ms)[0m  [1mDROP DATABASE IF EXISTS "insta_rails_test"[0m
+  [1m[35m (255.8ms)[0m  CREATE DATABASE "insta_rails_test" ENCODING = 'unicode'
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/pictures" for 127.0.0.1 at 2015-01-12 15:30:53 +0000
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (119.1ms)[0m  [1mDROP DATABASE IF EXISTS "insta_rails_test"[0m
+  [1m[35m (246.4ms)[0m  CREATE DATABASE "insta_rails_test" ENCODING = 'unicode'
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/pictures" for 127.0.0.1 at 2015-01-12 15:35:26 +0000
+Processing by PicturesController#index as HTML
+  Rendered pictures/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 657ms (Views: 649.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (119.0ms)[0m  [1mDROP DATABASE IF EXISTS "insta_rails_test"[0m
+  [1m[35m (255.5ms)[0m  CREATE DATABASE "insta_rails_test" ENCODING = 'unicode'
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/pictures" for 127.0.0.1 at 2015-01-12 15:35:55 +0000
+Processing by PicturesController#index as HTML
+  Rendered pictures/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 28ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
