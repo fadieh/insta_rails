@@ -58,4 +58,17 @@ feature 'restaurants' do
 
 	end
 
+	context 'deleting post' do
+
+		before {Post.create name: 'bants'}
+
+		scenario 'remove a post when a user clicks delete' do
+			visit '/posts'
+			click_link 'Delete'
+			expect(page).not_to have_content 'bants'
+			expect(page).to have_content 'Post deleted successfully'
+		end
+
+	end
+
 end
