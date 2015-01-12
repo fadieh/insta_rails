@@ -43,4 +43,19 @@ feature 'restaurants' do
 		end
 	end
 
+	context 'editing post' do
+
+		before {Post.create name: 'duckface'}
+
+		scenario 'let a user edit a post' do
+			visit '/posts'
+			click_link 'Edit'
+			fill_in 'Name', with: 'lol'
+			click_button 'Update Post'
+			expect(page).to have_content 'lol'
+			expect(current_path).to eq '/posts'
+		end
+
+	end
+
 end
