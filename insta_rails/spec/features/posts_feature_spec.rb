@@ -32,4 +32,15 @@ feature 'restaurants' do
 		end
 	end
 
+	context 'viewing posts' do
+		let!(:cats){Post.create(name:'cats')}
+
+		scenario 'lets a user view a restaurant' do
+			visit '/posts'
+			click_link 'cats'
+			expect(page).to have_content 'cats'
+			expect(current_path).to eq "/posts/#{cats.id}"
+		end
+	end
+
 end
