@@ -5,7 +5,7 @@ feature 'restaurants' do
 		scenario 'should display a prompt to add a post' do
 			visit '/posts'
 			expect(page).to have_content 'No posts'
-			expect(page).to have_link 'Add a post'
+			expect(page).to have_link 'Add post'
 		end
 	end
 
@@ -21,5 +21,15 @@ feature 'restaurants' do
 		end
 	end
 
+	context 'creating posts' do
+		scenario 'prompts user to fill out a form, then display the new post' do
+			visit '/posts'
+			click_link 'Add post'
+			fill_in 'Name', with: 'Lush beans on toast'
+			click_button 'Create Post'
+			expect(page).to have_content 'Lush beans on toast'
+			expect(current_path).to eq '/posts'
+		end
+	end
 
 end
