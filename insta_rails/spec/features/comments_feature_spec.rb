@@ -8,7 +8,6 @@ feature 'reviewing' do
 		click_link 'Comment'
 		fill_in 'Thoughts', with: 'So so'
 		click_button 'Comment'
-		save_and_open_page
 		expect(current_path).to eq '/posts'
 		expect(page).to have_content('So so')
 	end
