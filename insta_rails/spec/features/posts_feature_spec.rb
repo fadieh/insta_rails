@@ -1,13 +1,9 @@
 require 'rails_helper'
+require_relative 'helpers/session'
 
-feature 'restaurants' do
-	context 'no posts have been added' do
-		scenario 'should display a prompt to add a post' do
-			visit '/posts'
-			expect(page).to have_content 'No posts'
-			expect(page).to have_link 'Add post'
-		end
-	end
+include SessionHelpers
+
+feature 'posts' do
 
 	context 'posts have been added' do
 		before do
@@ -22,7 +18,14 @@ feature 'restaurants' do
 	end
 
 	context 'creating posts' do
+
+		before do
+			User.create(email: 'test@test.com', password: 'testtesttest')
+		end
+
 		scenario 'prompts user to fill out a form, then display the new post' do
+			visit '/'
+			sign_in('test@test.com', 'testtesttest')
 			visit '/posts'
 			click_link 'Add post'
 			fill_in 'Name', with: 'Lush beans on toast'
@@ -33,6 +36,7 @@ feature 'restaurants' do
 	end
 
 	context 'viewing posts' do
+		
 		let!(:cats){Post.create(name:'cats')}
 
 		scenario 'lets a user view a post' do
@@ -45,10 +49,14 @@ feature 'restaurants' do
 
 	context 'editing post' do
 
-		before {Post.create name: 'duckface'}
+		before do
+			User.create(email: 'test@test.com', password: 'testtesttest')
+			Post.create name: 'duckface'
+		end
 
 		scenario 'let a user edit a post' do
-			visit '/posts'
+			visit '/'
+			sign_in('test@test.com', 'testtesttest')
 			click_link 'Edit'
 			fill_in 'Name', with: 'lol'
 			click_button 'Update Post'
@@ -60,10 +68,14 @@ feature 'restaurants' do
 
 	context 'deleting post' do
 
-		before {Post.create name: 'bants'}
+		before do
+			User.create(email: 'test@test.com', password: 'testtesttest')
+			Post.create name: 'bants'
+		end
 
 		scenario 'remove a post when a user clicks delete' do
-			visit '/posts'
+			visit '/'
+			sign_in('test@test.com', 'testtesttest')
 			click_link 'Delete'
 			expect(page).not_to have_content 'bants'
 			expect(page).to have_content 'Post deleted successfully'

@@ -13,6 +13,11 @@ context 'user not signed in and on the homepage' do
 		expect(page).not_to have_link('Sign out')
 	end
 
+	it "should not see 'add post' link" do
+		visit('/')
+		expect(page).not_to have_content('Add post')
+	end
+
 end
 
 context 'user signed in on the homepage' do

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'reviewing' do
+feature 'posts' do
 	before {Post.create name: 'cats'}
 
 	scenario 'allow users to leave a comment using a form' do
