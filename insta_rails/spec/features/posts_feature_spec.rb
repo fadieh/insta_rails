@@ -6,6 +6,7 @@ include SessionHelpers
 feature 'posts' do
 
 	context 'posts have been added' do
+
 		before do
 			Post.create(name: 'Cats galore')
 		end
@@ -36,7 +37,7 @@ feature 'posts' do
 	end
 
 	context 'viewing posts' do
-		
+
 		let!(:cats){Post.create(name:'cats')}
 
 		scenario 'lets a user view a post' do

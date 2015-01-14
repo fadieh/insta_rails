@@ -4,6 +4,8 @@
 <h2> <%= link_to "Edit", edit_post_path(post) %> </h2>
 <h2> <%= link_to "Delete", post_path(post), method: :delete %> </h2>
 <h2> <%= link_to "Comment", new_post_comment_path(post) %> </h2>
+<h2> <%= link_to "Like", post_likes_path(post), class: 'likes-link' %> </h2>
+<span class="likes_count"> <%= post.likes.count %> </span> likes
 <h2>Comments</h2>
 <% if post.comments.any? %>
 <ul>
