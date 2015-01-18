@@ -7,7 +7,6 @@ class LikesController < ApplicationController
 	end
 
 	def index
-		@likes = Like.all
 		redirect_to posts_path
 	end
 

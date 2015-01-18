@@ -10,6 +10,7 @@ feature 'liking posts' do
 	it "a user can like a post, which increments the like count", js: true do
 		visit '/posts'
 		click_link 'Like'
+		save_and_open_page
 		expect(page).to have_content("1 like")
 	end
 
